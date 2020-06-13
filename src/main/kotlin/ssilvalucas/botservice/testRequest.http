@@ -1,0 +1,26 @@
+
+### Listar Motoristas
+GET http://localhost:8080/api/driver/list
+Content-Type: application/json
+
+### Cadastro Motorista
+POST http://localhost:8080/api/driver/register
+Content-Type: application/json
+
+{
+  "name": "Lucas",
+  "phoneNumber": "14981864662"
+}
+
+### Atualizar Cadastro Motorista
+PUT http://localhost:8080/api/driver/update/14981864662
+Content-Type: application/json
+
+{
+  "name": "Lucas Silva",
+  "phoneNumber": "11981864662"
+}
+
+### Deletar Cadastro Motorista
+DELETE http://localhost:8080/api/driver/delete/14981864662
+###

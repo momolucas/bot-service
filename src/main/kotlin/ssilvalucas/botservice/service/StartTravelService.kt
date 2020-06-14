@@ -12,4 +12,6 @@ class StartTravelService(val repository: StartTravelRepository, val mapper: Star
     fun save(driver: String, request: StartTravelRequest): StartTravel {
         return repository.save(mapper.requestToEntity(driver, request))
     }
+
+    fun findAll(): MutableList<StartTravel> = repository.findAll()
 }

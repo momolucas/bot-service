@@ -11,4 +11,6 @@ class PauseTravelService(val repository: PauseTravelRepository, val mapper: Paus
     fun save(driver: String): PauseTravel {
         return repository.save(mapper.requestToEntity(driver))
     }
+
+    fun findAll(): MutableList<PauseTravel> = repository.findAll()
 }

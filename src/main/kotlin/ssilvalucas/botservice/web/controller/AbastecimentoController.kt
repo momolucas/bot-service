@@ -13,4 +13,7 @@ class AbastecimentoController(val service: AbastecimentoService) {
     @PostMapping
     fun create(@PathVariable driver: String, @RequestBody request: AbastecimentoRequest) =
             ResponseEntity.status(HttpStatus.CREATED).body(service.save(driver, request))
+
+    @GetMapping("list")
+    fun fetchAllDrivers() = ResponseEntity.status(HttpStatus.OK).body(service.findAll())
 }

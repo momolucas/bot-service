@@ -12,4 +12,6 @@ class FinishTravelService(val repository: FinishTravelRepository, val mapper: Fi
     fun save(driver: String, request: FinishTravelRequest): FinishTravel {
         return repository.save(mapper.requestToEntity(driver, request))
     }
+
+    fun findAll(): MutableList<FinishTravel> = repository.findAll()
 }

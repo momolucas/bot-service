@@ -12,4 +12,6 @@ class ChecklistService(val repository: ChecklistRepository, val mapper: Checklis
     fun save(driver: String, request: ChecklistRequest): Checklist {
         return repository.save(mapper.requestToEntity(driver, request))
     }
+
+    fun findAll(): MutableList<Checklist> = repository.findAll()
 }

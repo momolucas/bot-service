@@ -13,4 +13,7 @@ class ChecklistController(val service: ChecklistService) {
     @PostMapping
     fun create(@PathVariable driver: String, @RequestBody request: ChecklistRequest) =
             ResponseEntity.status(HttpStatus.CREATED).body(service.save(driver, request))
+
+    @GetMapping("list")
+    fun fetchAllDrivers() = ResponseEntity.status(HttpStatus.OK).body(service.findAll())
 }

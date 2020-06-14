@@ -14,4 +14,7 @@ class FinishTravelController(val service: FinishTravelService) {
     fun create(@PathVariable phoneNumber: String, @RequestBody request: FinishTravelRequest) =
             ResponseEntity.status(HttpStatus.ACCEPTED).body(service.save(phoneNumber, request))
 
+    @GetMapping("list")
+    fun fetchAllDrivers() = ResponseEntity.status(HttpStatus.OK).body(service.findAll())
+
 }

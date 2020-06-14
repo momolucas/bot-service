@@ -1,5 +1,6 @@
 package ssilvalucas.botservice
 
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
@@ -11,11 +12,15 @@ class DriverController(val repository: DriverRepository) {
     fun create(@RequestBody driverModel: DriverModel) =
 //            repository.findFirstByPhoneNumber(driverModel.phoneNumber)
 //                    .ifPresent {
-                        ResponseEntity.ok(repository.save(driverModel))
+            ResponseEntity.ok(repository.save(driverModel))
 //                    }
 
     @GetMapping("list")
-    fun fetchAllDrivers() = ResponseEntity.ok(repository.findAll())
+    fun fetchAllDrivers() = ResponseEntity.status(HttpStatus.CREATED).body(repository.findAll())
+
+    @GetMapping("{phoneNumber}")
+    fun fetchDriver(@PathVariable phoneNumber: String) =
+            ResponseEntity.ok(repository.findFirstByPhoneNumber(phoneNumber))
 
     @PutMapping("update/{phoneNumber}")
     fun update(@PathVariable phoneNumber: String, @RequestBody driverModel: DriverModel): ResponseEntity<DriverModel> {

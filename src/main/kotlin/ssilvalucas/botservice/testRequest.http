@@ -1,3 +1,5 @@
+### Get Motorista
+GET http://localhost:8080/api/driver/5514981864662
 
 ### Listar Motoristas
 GET http://localhost:8080/api/driver/list

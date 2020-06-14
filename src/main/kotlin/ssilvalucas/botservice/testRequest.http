@@ -1,6 +1,6 @@
 
 ### Listar Motoristas
-GET http://botservice-env.eba-wcc37xpj.us-east-2.elasticbeanstalk.com/api/driver/list
+GET http://localhost:8080/api/driver/list
 Content-Type: application/json
 
 ### Cadastro Motorista
@@ -8,7 +8,7 @@ POST http://localhost:8080/api/driver/register
 Content-Type: application/json
 
 {
-  "name": "Lucass",
+  "name": "Lucas Jozefovicz",
   "phoneNumber": "5514981864662"
 }
 

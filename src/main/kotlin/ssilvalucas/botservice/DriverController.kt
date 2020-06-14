@@ -9,10 +9,10 @@ class DriverController(val repository: DriverRepository) {
 
     @PostMapping("register")
     fun create(@RequestBody driverModel: DriverModel) =
-            repository.findFirstByPhoneNumber(driverModel.phoneNumber)
-                    .ifPresent {
+//            repository.findFirstByPhoneNumber(driverModel.phoneNumber)
+//                    .ifPresent {
                         ResponseEntity.ok(repository.save(driverModel))
-                    }
+//                    }
 
     @GetMapping("list")
     fun fetchAllDrivers() = ResponseEntity.ok(repository.findAll())

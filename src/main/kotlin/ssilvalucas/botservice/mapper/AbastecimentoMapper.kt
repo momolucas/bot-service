@@ -8,9 +8,10 @@ import ssilvalucas.botservice.web.dto.response.CreatedResource
 @Component
 class AbastecimentoMapper {
 
-    fun requestToEntity(request: AbastecimentoRequest): Abastecimento {
-        val ab = Abastecimento();
-        ab.driver = ""
+    fun requestToEntity(driver: String, request: AbastecimentoRequest): Abastecimento {
+        val ab = Abastecimento()
+        ab.driver = driver
+        ab.litros = request.litros
         return ab
     }
 }

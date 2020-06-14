@@ -2,8 +2,8 @@ package ssilvalucas.botservice.data.repository
 
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
-import ssilvalucas.botservice.model.entity.Abastecimento
+import ssilvalucas.botservice.model.entity.StartTravel
 
 @Repository
-interface AbastecimentoRepository: MongoRepository<Abastecimento, String> {
+interface StartTravelRepository : MongoRepository<StartTravel, String> {
 }

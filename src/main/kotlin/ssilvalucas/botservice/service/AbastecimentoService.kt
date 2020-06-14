@@ -9,8 +9,8 @@ import ssilvalucas.botservice.web.dto.response.CreatedResource
 @Service
 class AbastecimentoService(val repository: AbastecimentoRepository, val mapper: AbastecimentoMapper) {
 
-    fun save(request: AbastecimentoRequest): CreatedResource {
-        val saved = repository.save(mapper.requestToEntity(request))
+    fun save(driver: String, request: AbastecimentoRequest): CreatedResource {
+        val saved = repository.save(mapper.requestToEntity(driver, request))
         return CreatedResource(saved.id)
     }
 }

@@ -1,5 +1,22 @@
+### Iniciar Viagem
+POST http://localhost:8080/api/diario/start/5514981864662
+Content-Type: application/json
+
+{
+  "odometroValue": 12345
+}
+
+### Abastecer
+POST http://localhost:8080/api/diario/abastecimento/5514981864662
+Content-Type: application/json
+
+{
+  "litros": 50
+}
+
 ### Get Motorista
 GET http://localhost:8080/api/driver/5514981864662
+Content-Type: application/json
 
 ### Listar Motoristas
 GET http://localhost:8080/api/driver/list

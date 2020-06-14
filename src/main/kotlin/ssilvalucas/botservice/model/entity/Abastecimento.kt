@@ -8,7 +8,9 @@ import java.time.LocalDateTime
 @Document(collection = "abastecimentos")
 class Abastecimento {
     @Id
-    lateinit var id:String
+    var id:String? = null
+
+    var litros : Double? = null
 
     lateinit var driver: String
 

@@ -1,3 +1,15 @@
+### Checklis
+POST http://localhost:8080/api/diario/checklist/5514981864662
+Content-Type: application/json
+
+{
+  "medidorOleo": "OK",
+  "pneus": "OK",
+  "farois": "OK",
+  "lanternas": "OK",
+  "limpeza": "OK"
+}
+
 ### Finalizar Viagem
 POST http://localhost:8080/api/diario/finish/5514981864662
 Content-Type: application/json

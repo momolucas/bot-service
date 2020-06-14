@@ -1,3 +1,11 @@
+### Parada para comer
+POST http://localhost:8080/api/diario/eat/5514981864662
+Content-Type: application/json
+
+### Pausa para descanso
+POST http://localhost:8080/api/diario/pause/5514981864662
+Content-Type: application/json
+
 ### Checklis
 POST http://localhost:8080/api/diario/checklist/5514981864662
 Content-Type: application/json

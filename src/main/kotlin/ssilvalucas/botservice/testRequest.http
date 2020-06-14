@@ -1,3 +1,11 @@
+### Finalizar Viagem
+POST http://localhost:8080/api/diario/finish/5514981864662
+Content-Type: application/json
+
+{
+  "odometroValue": 12345
+}
+
 ### Iniciar Viagem
 POST http://localhost:8080/api/diario/start/5514981864662
 Content-Type: application/json

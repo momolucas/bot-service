@@ -1,6 +1,6 @@
 
 ### Listar Motoristas
-GET http://localhost:8080/api/driver/list
+GET http://botservice-env.eba-wcc37xpj.us-east-2.elasticbeanstalk.com/api/driver/list
 Content-Type: application/json
 
 ### Cadastro Motorista
@@ -8,8 +8,8 @@ POST http://localhost:8080/api/driver/register
 Content-Type: application/json
 
 {
-  "name": "Lucas",
-  "phoneNumber": "14981864662"
+  "name": "Lucass",
+  "phoneNumber": "5514981864662"
 }
 
 ### Atualizar Cadastro Motorista
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 {
   "name": "Lucas Silva",
-  "phoneNumber": "11981864662"
+  "phoneNumber": "5511981864662"
 }
 
 ### Deletar Cadastro Motorista

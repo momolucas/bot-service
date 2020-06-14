@@ -11,6 +11,7 @@
     <groupId>ssilvalucas</groupId>
     <artifactId>bot-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>bot-service</name>
     <description>Service REST for Bot</description>
 

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*
 import ssilvalucas.botservice.model.entity.Driver
 import ssilvalucas.botservice.data.repository.DriverRepository
 
+@CrossOrigin
 @RestController
 @RequestMapping("api/driver/")
 class DriverController(val repository: DriverRepository) {
